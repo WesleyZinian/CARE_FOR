@@ -1,0 +1,19 @@
+#layouts {
+  width: 100%;
+  height: 100vh;
+
+  .layouts-top {
+    width: 100%;
+    --height: 60px;
+    height: var(--height);
+  }
+
+  .main-container {
+    width: 100%;
+    height: calc(100% - 60px);
+  }
+  #siderBar {
+    width: 210px;
+    height: 100%;
+  }
+}

@@ -2,15 +2,14 @@ import { defineStore } from "pinia";
 
 export const configStore = defineStore('config', {
   state: () => ({
-    count: 120
+    isCollapse: false,
   }),
   getters: {
-    getCount: (state) => state.count,
+    getCollapse: (state) => state.isCollapse
   },
   actions: {
-    increment() {
-      this.count++
-    },
+    expandSiderBar() {
+      this.isCollapse = !this.isCollapse
+    }
   }
-
 })
