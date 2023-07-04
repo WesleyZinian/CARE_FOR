@@ -3,3 +3,12 @@ interface ApiResponse<T = any> {
   data: T
   msg: string
 }
+
+export interface AdminInfo {
+  id: number
+  username: string
+  nickname: string
+  avatar: string
+  token: string
+  refreshToken: string
+}

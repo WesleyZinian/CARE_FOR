@@ -5,16 +5,16 @@ import { RouteRecordRaw } from "vue-router";
  */
 
 const staticRoutes: Array<RouteRecordRaw> = [
+  // {
+  //   path: '/',
+  //   name: '首页',
+  //   component: () => import('@/views/home/index.vue'),
+  //   meta: {
+  //     title: '首页',
+  //   }
+  // },
   {
     path: '/',
-    name: '首页',
-    component: () => import('@/views/home/index.vue'),
-    meta: {
-      title: '首页',
-    }
-  },
-  {
-    path: '/layouts',
     name: 'layouts',
     component: () => import('@/layouts/index.vue'),
     meta: {

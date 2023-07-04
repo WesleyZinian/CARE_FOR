@@ -5,18 +5,20 @@
     </div>
     <div class="main-container">
       <siderBar></siderBar>
-      <el-button type="primary" @click="changeSiderBar">Primary</el-button>
+      <div class="content"></div>
     </div>
   </div>
 </template>
 <script lang="ts" setup>
+import { ref } from 'vue';
 import navBar from './components/navBar.vue';
 import siderBar from './components/siderBar/index.vue'
-import { configStore } from '@/store/modules/config';
+import { configStore } from '@/store/config';
 const config = configStore()
 const changeSiderBar = () => {
   config.expandSiderBar()
 }
+const arr: Array<number> = []
 </script>
 <style lang="scss">
 @import url('@/style/layouts.scss');

@@ -1,19 +1,41 @@
 #layouts {
-  width: 100%;
+  --hunder: 100%;
+  --defaultPadding: 20px;
+  width: var(--hunder);
   height: 100vh;
 
   .layouts-top {
-    width: 100%;
+    width: var(--hunder);
     --height: 60px;
     height: var(--height);
   }
 
   .main-container {
-    width: 100%;
+    width: var(--hunder);
     height: calc(100% - 60px);
+    display: flex;
+    padding: var(--defaultPadding);
+    box-sizing: border-box;
   }
-  #siderBar {
-    width: 210px;
-    height: 100%;
+
+  .siderBar {
+    width: 270px;
+    height: var(--hunder);
+    border-radius: var();
+
+    .siderBar__body {
+      width: var(--hunder);
+      height: var(--hunder);
+      box-shadow: var(--el-box-shadow-light);
+
+      .el-menu {
+        border-right: none;
+      }
+    }
+  }
+
+  .hidden {
+    width: 64px !important;
+
   }
 }
