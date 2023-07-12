@@ -1,19 +1,21 @@
 <template>
-  <div id="layouts">
-    <div class="layouts-top">
+  <section id="layouts">
+    <div class="layouts_header">
       <navBar></navBar>
     </div>
     <div class="main-container">
       <siderBar></siderBar>
-      <div class="content"></div>
+      <div class="content_warp">
+        <div class="page_title">1111111111</div>
+      </div>
     </div>
-  </div>
+  </section>
 </template>
 <script lang="ts" setup>
-import { ref } from 'vue';
 import navBar from './components/navBar.vue';
 import siderBar from './components/siderBar/index.vue'
-import { configStore } from '@/store/config';
+import {configStore} from '@/store/config';
+
 const config = configStore()
 const changeSiderBar = () => {
   config.expandSiderBar()
@@ -21,5 +23,5 @@ const changeSiderBar = () => {
 const arr: Array<number> = []
 </script>
 <style lang="scss">
-@import url('@/style/layouts.scss');
+@use '@/style/layouts.scss';
 </style>
