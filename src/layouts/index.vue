@@ -6,7 +6,10 @@
     <div class="main-container">
       <siderBar></siderBar>
       <div class="content_warp">
-        <div class="page_title">1111111111</div>
+        <div class="page_title">{{ useRouter().currentRoute.value.meta.title }}</div>
+        <div class="content">
+          <router-view></router-view>
+        </div>
       </div>
     </div>
   </section>
@@ -15,6 +18,8 @@
 import navBar from './components/navBar.vue';
 import siderBar from './components/siderBar/index.vue'
 import {configStore} from '@/store/config';
+// import * as vueRouter from 'vue-router'
+import {useRouter} from 'vue-router'
 
 const config = configStore()
 const changeSiderBar = () => {

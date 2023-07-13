@@ -74,6 +74,12 @@
         font-size: 18px;
         font-weight: bold;
       }
+
+      .content {
+        width: 100%;
+        height: calc(100% - 41px);
+        margin-top: 20px;
+      }
     }
   }
 }

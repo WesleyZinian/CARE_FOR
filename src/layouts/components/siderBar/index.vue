@@ -33,6 +33,9 @@
 </template>
 <script lang="ts" setup>
 import {configStore} from "@/store/config";
+import { useRouter} from "vue-router";
+
+console.log(useRouter())
 
 const config = configStore()
 

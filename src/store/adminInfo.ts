@@ -5,7 +5,7 @@ import { RouteRecordRaw } from "vue-router";
 export const useAdminInfo = defineStore('useAdminInfo', () => {
 
   const routes = ref<Array<RouteRecordRaw>>([])
-  const setRoutes = (data: Array<RouteRecordRaw>) => {
+  const setRoutes =  (data: Array<RouteRecordRaw>) => {
     routes.value = data
   }
   return { routes, setRoutes }
