@@ -1,7 +1,7 @@
 <template>
-  <div id="siderbarItem" class="siderbarItem" v-if="item.hidden">
+  <template v-if="!item.meta.hidden">
     <template v-if="item.children">
-      <el-sub-menu :index="item!.meta!.title">
+      <el-sub-menu :index="item.path">
         <template #title>
           <i :class="item.meta.icon"></i>
           <span>{{ item.meta.title }}</span>
@@ -12,24 +12,24 @@
       </el-sub-menu>
     </template>
     <template v-else>
-      <router-link :to="item.path">
-        <el-menu-item :index="item.meta.title">
-          <template #title>
-            <i :class="item.meta.icon"></i>
-            <span>{{ item.meta.title }}</span>
-          </template>
-        </el-menu-item>
-      </router-link>
+      <el-menu-item :index="item.path" @click="routerPush(item.path)">
+        <template #title>
+          <i :class="item.meta.icon"></i>
+          <span>{{ item.meta.title }}</span>
+        </template>
+      </el-menu-item>
     </template>
-  </div>
+  </template>
 </template>
 
 <script lang="ts" setup>
 import siderbarItem from './siderbarItem.vue'
-const { item } = defineProps({
+import {routerPush} from '@/utils/router'
+
+const {item} = defineProps({
   item: {
     type: Object,
-    required: true,
+    required: true
   }
 })
 </script>

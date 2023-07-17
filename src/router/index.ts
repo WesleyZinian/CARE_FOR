@@ -1,7 +1,7 @@
 import {createRouter, createWebHashHistory} from "vue-router";
 import {staticRoutes} from "./static";
 import NProgress from 'nprogress'
-import {useAdminInfo} from '@/store/adminInfo'
+import {appStore} from '@/store/app'
 
 
 NProgress.configure({showSpinner: false})
@@ -12,11 +12,11 @@ const router = createRouter({
 })
 
 router.beforeEach(async (to, from, next) => {
+    const app = appStore()
     NProgress.start()
-    if (useAdminInfo().routes.length === 0) {
-        useAdminInfo().setRoutes(staticRoutes)
+    if (app.routes.length === 0) {
+        app.setRoutes(staticRoutes)
     }
-    console.log('useAdminInfo=>', useAdminInfo().routes)
     next()
 })
 

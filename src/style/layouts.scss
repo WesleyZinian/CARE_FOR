@@ -47,19 +47,10 @@
       }
     }
 
-    .siderBar.hidden {
-      width: 64px;
-
-      .siderBar-title {
-        .el-icon {
-          transform: rotate(-180deg);
-        }
-      }
-    }
-
     .content_warp {
       height: 100%;
-      flex: 1;
+      width: calc(100% - 270px - 20px);
+      transition: width 0.7s;
       margin-left: 20px;
       background: #FFFFFF;
       padding: var(--default_padding);
@@ -80,6 +71,22 @@
         height: calc(100% - 41px);
         margin-top: 20px;
       }
+    }
+  }
+
+  .main-container.aside-hidden {
+    .siderBar {
+      width: 64px;
+
+      .siderBar-title {
+        .el-icon {
+          transform: rotate(-180deg);
+        }
+      }
+    }
+
+    .content_warp {
+      width: calc(100% - 64px - 20px);
     }
   }
 }
