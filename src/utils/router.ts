@@ -11,10 +11,7 @@ export const routerPush = async (to: RouteLocationRaw) => {
                 type: 'error',
             })
         } else if (isNavigationFailure(failure, NavigationFailureType.duplicated)) {
-            ElNotification({
-                message: '跳转失败2',
-                type: 'warning',
-            })
+            // 重复的导航
         }
     } catch (error) {
         ElNotification({

@@ -3,7 +3,6 @@
     <template v-if="item.children">
       <el-sub-menu :index="item.path">
         <template #title>
-          <i :class="item.meta.icon"></i>
           <span>{{ item.meta.title }}</span>
         </template>
         <el-menu-item-group>
@@ -14,7 +13,6 @@
     <template v-else>
       <el-menu-item :index="item.path" @click="routerPush(item.path)">
         <template #title>
-          <i :class="item.meta.icon"></i>
           <span>{{ item.meta.title }}</span>
         </template>
       </el-menu-item>

@@ -3,9 +3,22 @@ import Layouts from '@/layouts/index.vue'
 
 /**
  * 静态路由
+ * 登录、404、401
  */
 
 const staticRoutes: Array<RouteRecordRaw> = [
+    {
+        path: '/login',
+        name: 'login',
+        component: () => import('@/views/login/index.vue'),
+        meta: {title: '登录'}
+    },
+]
+
+/**
+ * 菜单
+ */
+const menuRoutes: Array<RouteRecordRaw> = [
     {
         path: '/',
         name: 'admin',
@@ -36,19 +49,7 @@ const staticRoutes: Array<RouteRecordRaw> = [
             }
         ]
     },
-    // {
-    //     path: '/',
-    //     name: 'layouts',
-    //     component: () => import('@/layouts/index.vue'),
-    //     meta: {
-    //         title: 'layouts',
-    //     }
-    // },
-    // {
-    //     path: '/myEcharts',
-    //     name: 'myEcharts',
-    //     component: () => import('@/views/echarts/index.vue')
-    // }
 ]
 
-export {staticRoutes}
+
+export {staticRoutes, menuRoutes}
