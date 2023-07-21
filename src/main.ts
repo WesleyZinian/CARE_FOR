@@ -6,6 +6,7 @@ import router from './router'
 import {createPinia} from 'pinia';
 import '@/style/index.scss'
 import '@/assets/font/font.css'
+import 'animate.css'
 import * as ElementPlusIconsVue from '@element-plus/icons-vue'
 
 const app = createApp(App)

@@ -46,6 +46,15 @@ const menuRoutes: Array<RouteRecordRaw> = [
                     hidden: false,
                 },
                 component: () => import('@/views/home/index.vue')
+            },
+            {
+                path: '/custom_animation',
+                name: 'custom_animation',
+                meta: {
+                    title: '自定义动画',
+                    hidden: false,
+                },
+                component: () => import('@/views/animation/index.vue')
             }
         ]
     },
