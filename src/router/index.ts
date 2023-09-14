@@ -12,6 +12,8 @@ const router = createRouter({
 })
 
 router.beforeEach(async (to, from, next) => {
+    const rs = import.meta.glob('../views/**/index.vue')
+    console.log(rs);
     const app = appStore()
     NProgress.start()
     if (app.routes.length === 0) {
